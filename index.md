@@ -5,28 +5,51 @@ tags: Marta Prieto
 categories: demo
 ---
 
-This page is dedicated to tracking the prpgress of my SOC FPGA Project.
+This page is dedicated to tracking the prpgress of my SOC FPGA Project. the aim of this project is to use what I learn in my System on Chip Design module to create an FPGA project that will display a custom set of images on a 640x480 display.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
 Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
+I started by using a USB cable to connect the board to my computer to allow me to upload my image code, then I used a VGA cable to connect my board via the VGA port to my second monitor.I worked on a local folder on my machine as there were permission restrictions on OneDrive. I created a file called ATU on the C drive and then another file inside called VS where I put all my project files.
 
+<Img>
 
 <img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
 ### **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+
+I began coding by using a template Vivado project we were given and adapting it to practise creating different images.
+The first step in creating a custom image was reverse-engineering the template code to figure out how each pixel was being coloured. I used a pen and paper to calculate the width of each stripe and practised changing their colour. Then I changed the code to create horizontal rows of colour, rather than vertical lines.
+
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+
+Simulation is the first major step in Vivado's compilation process. Using the simulation buttom, I was able to verify that all my signals were behaving as expected and could move on to synthesis.
 ### **Synthesis**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+Synthesis converted this code into gates and vivado then ran implementation which placed and routed the design.
 ### **Demonstration**
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
+Once the bitstream was generated, I opened the hardware manager and programmed the board. Once I switched to VGA on my monitor, I was able to see the design.
 
 ## **My VGA Design Edit**
-Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
+Introduce your own design idea. Consider how complex/achievable this might be or otherwise. Reference any research you do online (use hyperlinks).
+
+My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me, and if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
+
+In VGAStripes I first created a fully red background, the practised adding two lines to make a cross on top.
+
+<img>
+
+Once I positioned the cross in a way I liked, I tried to add the blue cross on top. I initially tried to include it in my white cross if statement, but realised that if I did, once the column was drawn, the white row would cut off a portion of the blue, leaving a gap. I separated them out into two if statements and this resolved the issue as all of the white would be coloured before the blue gets added on top.
+<img>
+<img>
+
+From here I created several more flags icluding Ireland, France, Sweden, and Belgium, following largely the same process of trial and error. 
+I used <web> to find the 12-bit RGB value of each colour I used.
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
@@ -34,19 +57,6 @@ Describe the synthesis & implementation outputs for your design, are there any d
 ### **Demonstration**
 If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
 
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
-
-Font can be emphasised as *Italic* or **Bold**.
-
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
 
 Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
 
