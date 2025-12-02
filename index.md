@@ -22,7 +22,7 @@ Simulation is the first major step in Vivado's compilation process. Using the si
 The next step in the compliling process is synthesis. Synthesis converts the code into gates and translates their behaviour. Vivado then runs implementation which places and routes these logic gates. Implementation assigns logic to the FPGA board and checks timing constraints. Once all this work is done, it will generate the bitstream.
 ### **Demonstration**
 Once the bitstream was generated, I opened the hardware manager and programmed the board. After I switched to VGA on my monitor, I was able to see the design. In this case, I was viewing the template code file titled ColourStripes
-<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/colourtStripes.png">
+<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/colourStripes.png">
 ## **My VGA Design Edit**
 My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me; if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
 ### **Code Adaptation**
