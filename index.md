@@ -25,8 +25,6 @@ Once the bitstream was generated, I opened the hardware manager and programmed t
 ### **My VGA Design Edit**
 My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me; if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
 ### **Code Adaptation**
-Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
-
 In VGAStripes I first created a fully red background, the practised adding two lines to make a cross on top.
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/netherlandsFirst.jpeg">
 
@@ -41,14 +39,18 @@ I used <a href="https://oatcookies.neocities.org/twelvebitcolor"> this website <
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/france.jpeg">
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/sweden.jpeg">
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/belgium.jpeg">
-### **Simulation**
+### **Simulation, Synthesis, and Implementation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
-### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+When I first created the project, I ran each step separately to better understand the errors I was getting. 
+To avoid any errors, instead of doing each compiling step one by one, I used the "Generate Bitstream" button which does all 3 steps automatically.
+
+### **Errors**
+One of the longest running and most frustrating errors I ran into was when, no matter what I tried, I could not get the board to display any flag other than the Irish one. A nice display of patriotism, my hypothesis was that the board seemed to think that every state depicted the Irish colours, and that the code actually was cycling through them. I tried reducing the states to just two, Ireland and France, then removed Ireland entirely and replaced it with Sweden. Still, I couldn't get it to change. I compared my code with the template code and I used the AI tools available to us to try. Eventually, after nearly a full lab session of troubleshooting, I finally realised that when I clicked "Generate Bitstream", Vivado was using an old design from another file rather than creating one from the current project. 
+
+I remembered that at the start of the lab, after I had opened the correct file, I had been asked by a classmate to open that old file so they could compare our layouts. When they were finished, I shut down the old one and continued to work. Despite closing down the old project, because it was my most recently opened project, Vivado decided to use that to generate the bitstream.
+
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
-
-
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
-
-<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/VGAPrjSrcs.png">
+Once I figured this out I was able to reprogram my board correctly. I was finally able to get each flag showing one by one. I had hoped to add a few more flags, but ran out of time. If I had a few more weeks I would try to create a some more complicated images. 
+I knew I prefered having a small number of simple images that can be cycled through, than only one or two complicated images that I cannot cycle between. By doing the former, I was able to demonstrate an understanding of both ColourStripes and ColourCycle.
+<br>
+<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/finalProjVideo.gif">
