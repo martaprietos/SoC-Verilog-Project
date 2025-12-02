@@ -10,7 +10,7 @@ This page is dedicated to tracking the prpgress of my SOC FPGA Project. the aim 
 
 I started by using a USB cable to connect the board to my computer to allow me to upload my image code, then I used a VGA cable to connect my board via the VGA port to my second monitor.I worked on a local folder on my machine as there were permission restrictions on OneDrive. I created a file called ATU on the C drive and then another file inside called VS where I put all my project files.
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/filesystem.png">
-<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/VGAPrjSum.png">
+<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/stripesSummary.png">
 
 I began coding by using a template Vivado project we were given and adapting it to practise creating different images.
 The first step in creating a custom image was reverse-engineering the template code to figure out how each pixel was being coloured. I used a pen and paper to calculate the width of each stripe and practised changing their colour. Then I changed the code to create horizontal rows of colour, rather than vertical lines.
