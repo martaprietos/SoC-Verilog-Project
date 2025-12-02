@@ -41,12 +41,12 @@ My plan was to combine both VGAStripes and VGAColourCycle and create several sta
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 
 In VGAStripes I first created a fully red background, the practised adding two lines to make a cross on top.
-
-<img>
+<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/netherlandsFirst.png">
 
 Once I positioned the cross in a way I liked, I tried to add the blue cross on top. I initially tried to include it in my white cross if statement, but realised that if I did, once the column was drawn, the white row would cut off a portion of the blue, leaving a gap. I separated them out into two if statements and this resolved the issue as all of the white would be coloured before the blue gets added on top.
-<img>
-<img>
+<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/whiteRedNetherlands.png">
+<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/whiteBlueNetherlands.png">
+<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/netherlands.png">
 
 From here I created several more flags icluding Ireland, France, Sweden, and Belgium, following largely the same process of trial and error. 
 I used <web> to find the 12-bit RGB value of each colour I used.
