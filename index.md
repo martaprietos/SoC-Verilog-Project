@@ -9,15 +9,13 @@ This page is dedicated to tracking the prpgress of my SOC FPGA Project. the aim 
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
 I started by using a USB cable to connect the board to my computer to allow me to upload my image code, then I used a VGA cable to connect my board via the VGA port to my second monitor.I worked on a local folder on my machine as there were permission restrictions on OneDrive. I created a file called ATU on the C drive and then another file inside called VS where I put all my project files.
+<img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/filesystem.png">
 
 <Img>
 
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/VGAPrjSum.png">
-### **Template Code**
-Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
 
 I began coding by using a template Vivado project we were given and adapting it to practise creating different images.
 The first step in creating a custom image was reverse-engineering the template code to figure out how each pixel was being coloured. I used a pen and paper to calculate the width of each stripe and practised changing their colour. Then I changed the code to create horizontal rows of colour, rather than vertical lines.
@@ -36,7 +34,7 @@ Once the bitstream was generated, I opened the hardware manager and programmed t
 ## **My VGA Design Edit**
 Introduce your own design idea. Consider how complex/achievable this might be or otherwise. Reference any research you do online (use hyperlinks).
 
-My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me, and if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
+My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me; if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 
