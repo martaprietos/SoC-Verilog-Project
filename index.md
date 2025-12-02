@@ -10,7 +10,6 @@ This page is dedicated to tracking the prpgress of my SOC FPGA Project. the aim 
 
 I started by using a USB cable to connect the board to my computer to allow me to upload my image code, then I used a VGA cable to connect my board via the VGA port to my second monitor.I worked on a local folder on my machine as there were permission restrictions on OneDrive. I created a file called ATU on the C drive and then another file inside called VS where I put all my project files.
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/filesystem.png">
-
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/VGAPrjSum.png">
 
 I began coding by using a template Vivado project we were given and adapting it to practise creating different images.
@@ -43,7 +42,7 @@ Once I positioned the cross in a way I liked, I tried to add the blue cross on t
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/netherlands.jpeg">
 
 From here I created several more flags icluding Ireland, France, Sweden, and Belgium, following largely the same process of trial and error. 
-I used <web> to find the 12-bit RGB value of each colour I used.
+I used <a href="https://oatcookies.neocities.org/twelvebitcolor"> this website </a> to find the 12-bit RGB value of each colour I used.
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/ireland.jpeg">
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/france.jpeg">
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/sweden.jpeg">
