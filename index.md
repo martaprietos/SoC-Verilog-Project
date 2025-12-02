@@ -14,7 +14,6 @@ I started by using a USB cable to connect the board to my computer to allow me t
 
 I began coding by using a template Vivado project we were given and adapting it to practise creating different images.
 The first step in creating a custom image was reverse-engineering the template code to figure out how each pixel was being coloured. I used a pen and paper to calculate the width of each stripe and practised changing their colour. Then I changed the code to create horizontal rows of colour, rather than vertical lines.
-
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/firstImage.jpeg">
 ### **Simulation**
 Simulation is the first major step in Vivado's compilation process. Using the simulation buttom, I was able to verify that all my signals were behaving as expected and could move on to synthesis. There were a few instances where I tried to run synthesis but had forgotten to move my Testbench file to the top of my Simulation Sources section. Once the files were properly arranged, it ran as normal, though it often took a long time to compile
@@ -23,7 +22,7 @@ The next step in the compliling process is synthesis. Synthesis converts the cod
 ### **Demonstration**
 Once the bitstream was generated, I opened the hardware manager and programmed the board. After I switched to VGA on my monitor, I was able to see the design. In this case, I was viewing the template code file titled ColourStripes
 <img src="https://raw.githubusercontent.com/martaprietos/SoC-Verilog-Project/main/docs/assets/images/colourStripes.png">
-## **My VGA Design Edit**
+### **My VGA Design Edit**
 My plan was to combine both VGAStripes and VGAColourCycle and create several static images of varying complexity and cycle between them. I believed that this would be achievable for me; if I could not get ColourCycle to work, I would just try to create the most complicated image I could. As a result, I decided to start with the flag of Norway. 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
